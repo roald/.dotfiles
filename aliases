@@ -1,0 +1,10 @@
+# cd
+alias ..="cd .."
+
+# ls
+alias ls="ls -FG"
+alias ll="ls -l"
+alias la="ls -AlG"
+
+# git
+alias gs="git status"
