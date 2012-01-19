@@ -1,7 +1,7 @@
 # set aliases
 if [ -f ~/.dotfiles/aliases ]
 then
-	. ~/.dotfiles/aliases
+	source ~/.dotfiles/aliases
 fi
 
 # bind
