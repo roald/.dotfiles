@@ -18,6 +18,7 @@ alias esp="open -a Espresso"
 
 # Useful and fun GIT shortcuts
 alias gs="git status"
+alias gd="git diff"
 alias gc="git commit"
 alias gco="git checkout"
 alias grm="git status | grep deleted | awk '{print $3}' | xargs git rm"
