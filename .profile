@@ -1,3 +1,9 @@
+# set aliases
+if [ -f ~/.dotfiles/aliases ]
+then
+	. ~/.dotfiles/aliases
+fi
+
 # bind
 bind "set completion-ignore-case on"
 
