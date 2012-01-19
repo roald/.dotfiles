@@ -1,0 +1,10 @@
+[user]
+        name = Roald Dijkstra
+        email = roald@roalddijkstra.nl
+[color]
+        ui = true
+[alias]
+        ci = commit
+        st = status
+        glog = log --oneline --graph --decorate
+        co = checkout
