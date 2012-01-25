@@ -1,5 +1,6 @@
 # Using just the dots for moving up
 alias ..="cd .."
+alias cd..="cd .."
 
 
 # Colorful LS commands with some other presets
