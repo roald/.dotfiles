@@ -14,6 +14,11 @@ then
   source ~/.dotfiles/.profile
 fi
 
+Also provide symlinks for..
+
+* .vimrc
+* .vim/ 
+
 ## Contents
 
 Providing aliases and shell modifications.
