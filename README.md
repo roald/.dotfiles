@@ -4,14 +4,14 @@
 
 Link profile file to profile file in this folder. This file will set all aliases
 
-* ln -s ~/.dotfiles/profile ~/.profile
-* ln -s ~/.dotfiles/profile ~/.bash_profile
+* ln -s ~/.dotfiles/main.sh ~/.profile
+* ln -s ~/.dotfiles/main.sh ~/.bash_profile
 
 When the .profile file is needed for additional computer based stuff, add the following code
 
-if [ -f ~/.dotfiles/.profile ]
+if [ -f ~/.dotfiles/main.sh ]
 then
-  source ~/.dotfiles/.profile
+  source ~/.dotfiles/main.sh
 fi
 
 Also provide symlinks for..
