@@ -1,6 +1,13 @@
-# PROFILE MANAGEMENT FILES
+# DotFiles: Profile management
 
-## INSTALL
+## Contents
+
+Providing aliases and shell / GUI modifications.
+
+Shortcuts for GIT and Ruby
+
+
+## Install
 
 Link profile file to profile file in this folder. This file will set all aliases
 
@@ -10,7 +17,7 @@ When the .profile file is needed for additional computer based stuff, add the fo
 
 if [ -f ~/.dotfiles/main.sh ]  
 then  
-  source ~/.dotfiles/main.sh  
+    source ~/.dotfiles/main.sh  
 fi  
 
 Also provide symlinks for..
@@ -18,9 +25,3 @@ Also provide symlinks for..
 * .vimrc
 * .vim/ 
 * .gitignore
-
-## Contents
-
-Providing aliases and shell modifications.
-
-Shortcuts for GIT and Ruby 
