@@ -2,10 +2,9 @@
 
 ## Contents
 
-Providing aliases and shell / GUI modifications.
-
-Shortcuts for GIT and Ruby
-
+- Providing aliases and shell / GUI modifications.
+- Shortcuts for GIT and Ruby
+- SVN repository information in prompt
 
 ## Install
 

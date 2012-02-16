@@ -26,10 +26,15 @@ function parse_git_branch {
   fi
 }
 
+function parse_svn_repo {
+  repo="$(svn info 2>/dev/null | sed -ne  's#^Repository Root: ##p')"
+  echo " (${repo})"
+}
+
 function prompt_func() {
     previous_return_value=$?;
     #prompt="\[$txtgrn\]\u: \[$txtrst\]\w\[$txtred\]$(__git_ps1)\[$txtrst\]"
-    prompt="\[$txtgrn\]\u: \[$txtrst\]\w\[$txtred\]$(parse_git_branch)\[$txtrst\]"
+    prompt="\[$txtgrn\]\u: \[$txtrst\]\w\[$txtred\]$(parse_git_branch)$(parse_svn_repo)\[$txtrst\]"
     if test $previous_return_value -eq 0
     then
         PS1="${prompt} $ "
