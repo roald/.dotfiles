@@ -28,7 +28,9 @@ function parse_git_branch {
 
 function parse_svn_repo {
   repo="$(svn info 2>/dev/null | sed -ne  's#^Repository Root: ##p')"
-  echo " (${repo})"
+  if [ -n "$repo" ]; then
+    echo " (${repo})"
+  fi
 }
 
 function prompt_func() {
