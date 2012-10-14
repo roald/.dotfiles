@@ -42,4 +42,5 @@ alias gc="git commit"
 alias gca="git commit -a"
 alias gco="git checkout"
 alias grm="git status | grep deleted | awk '{print $3}' | xargs git rm"
-
+alias glog="git log --graph --pretty=oneline --abbrev-commit"
+alias gpo="git push origin"
