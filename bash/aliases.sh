@@ -35,7 +35,17 @@ alias esp="open -a Espresso"
 
 
 # Useful and fun GIT shortcuts
+
+# Will return the current branch name
+# Usage example: git pull origin $(current_branch)
+function current_branch() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || \
+  ref=$(git rev-parse --short HEAD 2> /dev/null) || return
+  echo ${ref#refs/heads/}
+}
+
 alias gs="git status"
+alias gss="git status -s -b"
 alias gd="git diff"
 alias ga="git add"
 alias gc="git commit"
@@ -44,3 +54,4 @@ alias gco="git checkout"
 alias grm="git status | grep deleted | awk '{print $3}' | xargs git rm"
 alias glog="git log --graph --pretty=format:'%Cblue%h %Cgreen%aN%Creset: %s %Cred%cr'"
 alias gpo="git push origin"
+alias gpob="git push origin $(current_branch)"
