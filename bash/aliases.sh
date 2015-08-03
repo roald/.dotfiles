@@ -34,6 +34,10 @@ alias o="less"
 alias esp="open -a Espresso"
 
 
+# Making ringtones in OSX Terminal
+alias ringtone="afconvert -f m4af"
+
+
 # Useful and fun GIT shortcuts
 
 # Will return the current branch name
