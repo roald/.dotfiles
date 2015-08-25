@@ -21,7 +21,7 @@ fi
 
 # Colorful LS commands with some other presets
 alias ls="ls -F ${colorflag}"
-alias ll="ls -l ${colorflag}"
+alias ll="ls -l -h ${colorflag}"
 alias la="ls -Al ${colorflag}"
 alias lsd='ls -l ${colorflag} | grep "^d"'
 
