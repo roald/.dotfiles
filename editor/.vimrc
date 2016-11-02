@@ -23,6 +23,25 @@ set mouse=a
 set go=-m
 
 
-"Enable spelling correction *for all files*... wonder how well that works.
+" Enable spelling correction *for all files*... wonder how well that works.
 set spell 
+
+
+" Show command while typing
+set showcmd
+
+" Show line numbers
+set number
+
+" Enable multiple files in buffer
+set hidden
+
+" Always show statusbar
+set laststatus=2
+
+" Search highlighting
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 
