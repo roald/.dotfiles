@@ -10,7 +10,7 @@ set nojoinspaces
 if exists('+colorcolumn')
   set colorcolumn=80
 endif
-  
+
 
 " Set identation
 set expandtab
@@ -24,7 +24,7 @@ set go=-m
 
 
 " Enable spelling correction *for all files*... wonder how well that works.
-set spell 
+set spell
 
 
 " Show command while typing
@@ -45,3 +45,5 @@ set incsearch
 set ignorecase
 set smartcase
 
+" let Ctrl-s save a file as well
+nmap <C-s> :w<CR>
