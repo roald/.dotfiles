@@ -64,3 +64,7 @@ alias gpuob="git push -u origin $(current_branch)"
 
 # Ruby shortcuts
 alias be="bundle exec"
+
+
+# Laravel shortcuts
+alias art="php artisan"
