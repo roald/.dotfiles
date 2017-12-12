@@ -66,3 +66,7 @@ alias gbup="git remote prune origin"
 
 # Ruby shortcuts
 alias be="bundle exec"
+
+
+# Laravel shortcuts
+alias art="php artisan"
