@@ -59,7 +59,9 @@ alias grm="git status | grep deleted | awk '{print $3}' | xargs git rm"
 alias glog="git log --graph --pretty=format:'%Cblue%h %Cgreen%aN%Creset: %s %Cred%cr'"
 alias gpo="git push origin"
 alias gpob="git push origin $(current_branch)"
-alias gpuob="git push -u origin $(current_branch)"
+alias gpuob="git push --set-upstream origin $(current_branch)"
+alias gb="git branch"
+alias gbup="git remote prune origin"
 
 
 # Ruby shortcuts
