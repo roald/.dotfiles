@@ -63,6 +63,10 @@ alias gpuob="git push --set-upstream origin $(current_branch)"
 alias gb="git branch"
 alias gbup="git remote prune origin"
 
+# Add git completion to aliases
+__git_complete gco _git_checkout
+__git_complete gb _git_branch
+
 
 # Ruby shortcuts
 alias be="bundle exec"

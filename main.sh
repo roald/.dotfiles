@@ -2,6 +2,9 @@
 source ~/.dotfiles/bash/colors.sh
 source ~/.dotfiles/bash/aliases.sh
 
+# add git completion
+source ~/.dotfiles/bash/git-completion.bash
+
 # bind
 bind "set completion-ignore-case on"
 
