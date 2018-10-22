@@ -26,34 +26,23 @@ function parse_git_branch {
   fi
 }
 
-function parse_svn_repo {
-  repo="$(svn info 2>/dev/null | sed -ne  's#^Repository Root: ##p')"
-  if [ -n "$repo" ]; then
-    echo " (${repo})"
-  fi
-}
-
 function prompt_func() {
     previous_return_value=$?;
-    #prompt="\[$txtgrn\]\u: \[$txtrst\]\w\[$txtred\]$(__git_ps1)\[$txtrst\]"
-    # prompt="\[$txtgrn\]\u: \[$txtrst\]\w\[$txtred\]$(parse_git_branch)$(parse_svn_repo)\[$txtrst\]"
-    prompt="\[$txtgrn\]\u\[$txtwht\] at\[$txtcyn\] \h: \[$txtrst\]\w\[$txtred\]$(parse_git_branch)$(parse_svn_repo)\[$txtrst\]"
+    prompt="\[$txtgrn\]\u\[$txtwht\] at\[$txtcyn\] \h: \[$txtrst\]\w\[$txtred\]$(__git_ps1)\[$txtrst\]"
+    statusbar="$(it2setkeylabel set status "$(test -d .git && echo "branch $(__git_ps1)" || (echo 'not a repo'))")"
     if test $previous_return_value -eq 0
     then
-        PS1="${prompt} $ "
+        PS1="${prompt}${statusbar} $ "
     else
-        PS1="${prompt} ${txtred}➔${txtrst} "
+        PS1="${prompt} ${txtred}➔${txtrst}${statusbar} "
     fi
 }
 
 PROMPT_COMMAND=prompt_func
 
-
 # Default Git enabled prompt
-#source ~/.dotfiles/bash/git-completion.sh                                       
-#export GIT_PS1_SHOWDIRTYSTATE=true
-#export GIT_PS1_SHOWSTASHSTATE=true
-#export GIT_PS1_SHOWUNTRACKEDFILES=true
-#export PS1="\[$txtgrn\]\u\[$txtrst\]: \w\[$txtred\] $(__git_ps1)\[$txtrst\] \$ "
-
-#export PS1="\[$txtgrn\]\u\[$txtrst\]: \w\[$txtred\] $(parse_git_branch)\[$txtrst\] \$ "
+source ~/.dotfiles/bash/git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWSTASHSTATE=true
+# export GIT_PS1_SHOWUNTRACKEDFILES=true
+# export GIT_PS1_SHOWUPSTREAM="auto"
