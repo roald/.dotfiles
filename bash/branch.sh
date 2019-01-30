@@ -29,12 +29,12 @@ function parse_git_branch {
 function prompt_func() {
     previous_return_value=$?;
     prompt="\[$txtgrn\]\u\[$txtwht\] at\[$txtcyn\] \h: \[$txtrst\]\w\[$txtred\]$(__git_ps1)\[$txtrst\]"
-    statusbar="$(it2setkeylabel set status "$(test -d .git && echo "branch $(__git_ps1)" || (echo 'not a repo'))")"
+    statusbar="\[$(~/.iterm2/it2setkeylabel set status "$(test -d .git && echo "branch $(__git_ps1)" || (echo -n 'not a repo'))")"
     if test $previous_return_value -eq 0
     then
-        PS1="${prompt}${statusbar} $ "
+        PS1="${prompt}${statusbar} \$ "
     else
-        PS1="${prompt} ${txtred}➔${txtrst}${statusbar} "
+        PS1="${prompt}${statusbar} ${txtred}➔${txtrst} "
     fi
 }
 
